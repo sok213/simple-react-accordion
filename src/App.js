@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import s from './App.module.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import JsonEditor from './components/JsonEditor/JsonEditor';
+import AccordionView from './components/AccordionView/AccordionView';
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      themes: [
+        "basic",
+        "minimal",
+        "transparent",
+        "thick",
+        "dark",
+        "professional",
+      ],
+      activeTheme: "basic",
+      items: [
+        {
+          header: "What makes this accordion so special?",
+          content: "This accordian is special because..."
+        },
+        {
+          header: "What is love?",
+          content: "This accordian is special because..."
+        }
+      ],
+    }
+  }
+
+  getEditorValue = editorValue => {
+    this.setState({ items: JSON.parse(editorValue) });
+  }
+
+  render() {
+    return (
+      <div className={s.container}>
+        <JsonEditor 
+          items={this.state.items} 
+          getEditorValue={this.getEditorValue}
+        />
+        <AccordionView 
+          activeTheme={this.state.activeTheme} 
+          items={this.state.items}
+        />
+      </div>
+    );
+  }
 }
+
 
 export default App;
