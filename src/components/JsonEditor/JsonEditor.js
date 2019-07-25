@@ -28,10 +28,16 @@ class JsonEditor extends Component {
     this.setState({ code: newCode });
   }
 
+  changeTheme = (activeTheme) => {
+    this.props.changeTheme(activeTheme);
+  }
+
   render() {
     return (
       <div className={s.container}>
-        <ThemeSelector />
+        <ThemeSelector 
+          changeTheme={this.changeTheme}
+        />
         <h3>JSON Data</h3>
         <CodeMirror 
           style={{height: "100%"}}
@@ -39,7 +45,11 @@ class JsonEditor extends Component {
           onChange={this.updateCode} 
           options={this.state.options} 
         />
-        <button onClick={this.props.getEditorValue.bind(this, this.state.code)}>Submit</button>
+        <button 
+          onClick={this.props.getEditorValue.bind(this, this.state.code)}
+        >
+          Submit
+        </button>
       </div>
     );
   }

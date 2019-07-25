@@ -13,6 +13,8 @@ class AccordionView extends Component {
       return s.dark;
     } else if(this.props.theme === "professional") {
       return s.professional;
+    } else if(this.props.theme === "minimal") {
+      return s.minimal;
     }
   }
 

@@ -26,7 +26,7 @@ class App extends Component {
           header: "What is love?",
           content: "This accordian is special because..."
         }
-      ],
+      ]
     }
   }
 
@@ -34,17 +34,23 @@ class App extends Component {
     this.setState({ items: JSON.parse(editorValue) });
   }
 
+  changeTheme = (selectedTheme) => {
+    console.log('hi.')
+    this.setState({ activeTheme: selectedTheme });
+  }
+
   render() {
     return (
       <div className={s.container}>
         <JsonEditor 
+          changeTheme={this.changeTheme}
           items={this.state.items} 
           getEditorValue={this.getEditorValue}
         />
         <AccordionView 
           activeTheme={this.state.activeTheme} 
           items={this.state.items}
-          theme={"basic"}
+          theme={this.state.activeTheme}
         />
       </div>
     );

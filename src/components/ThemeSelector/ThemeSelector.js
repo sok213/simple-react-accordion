@@ -16,13 +16,19 @@ class ThemeSelector extends Component {
       ]
     }
   }
+  
   render() {
     return (
-      <div>
+      <div className={s.container}>
         <h3>Select Theme</h3>
-        {this.state.themes.map((theme) => {
+        {this.state.themes.map(theme => {
           return (
-            <button>{theme}</button>
+            <button 
+              key={theme}
+              onClick={this.props.changeTheme.bind(this, theme)}
+            >
+              {theme}
+            </button>
           );
         })}
       </div>
