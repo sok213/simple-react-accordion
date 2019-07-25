@@ -5,10 +5,8 @@ import 'codemirror/lib/codemirror.css';
 import ThemeSelector from '../ThemeSelector/ThemeSelector';
 
 class JsonEditor extends Component {
-
   constructor() {
     super();
-
     this.state = {
       code: '[\n' + 
       ' { \n' +  
@@ -20,7 +18,7 @@ class JsonEditor extends Component {
         '\n  "content": "This accordion is special because..." \n ' + 
       '}' +
      '\n]',
-      options: { lineNumbers: true, json: true, lineWrapping: true}
+      options: { lineNumbers: true, json: true, lineWrapping: true }
     }
   }
 
@@ -28,7 +26,7 @@ class JsonEditor extends Component {
     this.setState({ code: newCode });
   }
 
-  changeTheme = (activeTheme) => {
+  changeTheme = activeTheme => {
     this.props.changeTheme(activeTheme);
   }
 
@@ -39,11 +37,11 @@ class JsonEditor extends Component {
           changeTheme={this.changeTheme}
         />
         <h3>JSON Data</h3>
-        <CodeMirror 
-          style={{height: "100%"}}
-          value={this.state.code} 
-          onChange={this.updateCode} 
-          options={this.state.options} 
+        <CodeMirror
+          style={{ height: "100%" }}
+          value={this.state.code}
+          onChange={this.updateCode}
+          options={this.state.options}
         />
         <button 
           onClick={this.props.getEditorValue.bind(this, this.state.code)}

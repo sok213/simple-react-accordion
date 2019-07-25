@@ -3,6 +3,12 @@ import s from './App.module.scss';
 import JsonEditor from './components/JsonEditor/JsonEditor';
 import AccordionView from './components/AccordionView/AccordionView';
 
+// TODO:
+// 1) Update theme button styles.
+// 2) Create theme css classes.
+// 3) Create editor panel on mobile.
+// 4) Update dimensions to accomodate accordion text length sizes.
+
 class App extends Component {
   constructor() {
     super();
