@@ -2,7 +2,20 @@ import React, { Component } from 'react';
 import s from './AccordionView.module.scss';
 
 class AccordionView extends Component {
-  
+  applyTheme = () => {
+    if(this.props.theme === "basic") {
+      return s.basic;
+    } else if(this.props.theme === "transparent") {
+      return s.transparent
+    } else if(this.props.theme === "thick") {
+      return s.thick;
+    } else if(this.props.theme === "dark") {
+      return s.dark;
+    } else if(this.props.theme === "professional") {
+      return s.professional;
+    }
+  }
+
   generateAccordion = () => {
     return this.props.items.map((item, key) => {
       return (
@@ -19,7 +32,7 @@ class AccordionView extends Component {
 
   render() {
     return (
-      <div className={s.accordion}>
+      <div className={`${s.accordion} ${this.applyTheme()}`}>
         {this.generateAccordion()}
       </div>
     );

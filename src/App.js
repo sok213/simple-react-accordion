@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import s from './App.module.scss';
-
 import JsonEditor from './components/JsonEditor/JsonEditor';
 import AccordionView from './components/AccordionView/AccordionView';
 
@@ -45,6 +44,7 @@ class App extends Component {
         <AccordionView 
           activeTheme={this.state.activeTheme} 
           items={this.state.items}
+          theme={"basic"}
         />
       </div>
     );

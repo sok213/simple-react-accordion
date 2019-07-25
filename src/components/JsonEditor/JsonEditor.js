@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import s from './JsonEditor.module.scss';
 import CodeMirror from 'react-codemirror';
 import 'codemirror/lib/codemirror.css';
+import ThemeSelector from '../ThemeSelector/ThemeSelector';
 
 class JsonEditor extends Component {
 
@@ -23,14 +24,15 @@ class JsonEditor extends Component {
     }
   }
 
-  updateCode = (newCode) => {
+  updateCode = newCode => {
     this.setState({ code: newCode });
   }
 
   render() {
     return (
       <div className={s.container}>
-        JSON DATA
+        <ThemeSelector />
+        <h3>JSON Data</h3>
         <CodeMirror 
           style={{height: "100%"}}
           value={this.state.code} 
