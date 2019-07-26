@@ -44,6 +44,7 @@ class JsonEditor extends Component {
           options={this.state.options}
         />
         <button 
+          className={s.submitBtn}
           onClick={this.props.getEditorValue.bind(this, this.state.code)}
         >
           Submit

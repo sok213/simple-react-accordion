@@ -1,19 +1,11 @@
 .container {
   width: 550px;
-  height: 550px;
   display: fixed;
   padding: 20px;
   margin: auto;
-
-  // @media screen and (max-width: 960px) {
-  //   display: none;
-  // }
 }
 
-// .mobileContainer {
-//   display: none;
-
-//   @media screen and (max-width: 960px) {
-//     display: flex;
-//   }
-// }
+.submitBtn {
+  margin-top: 20px;
+  z-index: 100;
+}
