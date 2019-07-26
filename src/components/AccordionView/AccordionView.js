@@ -34,8 +34,14 @@ class AccordionView extends Component {
         <div key={key}>
           <input type="radio" name="panel" id={`panel-${key}`} />
           <label htmlFor={`panel-${key}`}>{item.header}</label>
-          <div className={`${s.accordion__content} ${this.applySizeClass(item)}`}>
-            <p className={s.accordion__body}>{item.content}</p>
+          <div 
+            className={`
+              ${s.accordion__content} 
+              ${this.applySizeClass(item)}
+            `}>
+            <p className={s.accordion__body}>
+              {item.content.length < 756 ? item.content : "ERROR: content must not exceed 756 characters." }
+            </p>
           </div>
         </div>
       );
@@ -44,7 +50,10 @@ class AccordionView extends Component {
 
   render() {
     return (
-      <div className={`${s.accordion} ${this.applyTheme()}`}>
+      <div className={`
+        ${s.accordion} 
+        ${this.applyTheme()}
+      `}>
         {this.generateAccordion()}
       </div>
     );
