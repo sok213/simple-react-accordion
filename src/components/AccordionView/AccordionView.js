@@ -18,13 +18,23 @@ class AccordionView extends Component {
     }
   }
 
+  applySizeClass({ content }) {
+    if(content.length <= 284) {
+      return s.accordion__contentSmall;
+    } else if(content.length <= 484) {
+      return s.accordion__contentMedium;
+    } else {
+      return s.accordion__contentLarge;
+    }
+  }
+
   generateAccordion = () => {
     return this.props.items.map((item, key) => {
       return (
         <div key={key}>
           <input type="radio" name="panel" id={`panel-${key}`} />
           <label htmlFor={`panel-${key}`}>{item.header}</label>
-          <div className={`${s.accordion__content} ${s.accordion__contentSmall}`}>
+          <div className={`${s.accordion__content} ${this.applySizeClass(item)}`}>
             <p className={s.accordion__body}>{item.content}</p>
           </div>
         </div>

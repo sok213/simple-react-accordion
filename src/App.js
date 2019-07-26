@@ -9,6 +9,9 @@ import AccordionView from './components/AccordionView/AccordionView';
 // 3) Create editor panel on mobile.
 // 4) Update dimensions to accomodate accordion text length sizes.
 
+// BUG: 
+// 1) height 100% conflicts with transition animation.
+
 class App extends Component {
   constructor() {
     super();
@@ -30,10 +33,14 @@ class App extends Component {
         },
         {
           header: "What is love?",
-          content: "This accordian is special because..."
+          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit "
         }
       ]
     }
+  }
+
+  componentDidMount() {
+    console.log(this.state.items[1].content.length);
   }
 
   getEditorValue = editorValue => {
@@ -41,7 +48,6 @@ class App extends Component {
   }
 
   changeTheme = (selectedTheme) => {
-    console.log('hi.')
     this.setState({ activeTheme: selectedTheme });
   }
 

@@ -11,7 +11,7 @@
 $light-grey: #eee;
 $med-grey: #666;
 $dark-grey: #444;
-$highlight-color: #27ae60;
+$highlight-color: black;
 
 
 /*
@@ -32,31 +32,6 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
   box-sizing: border-box;
 }
 
-/* 
-* Base
-*/
-
-// body {
-//   font-family: 'Open Sans', sans-serif;
-//   background: $light-grey;
-  
-//   &:before {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
-//   }
-  
-// }
-
-
-/*
-* Accordion
-*/
-
 /* Basic Accordion Styles */
 .accordion {
   margin-top: 60px;
@@ -64,9 +39,6 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
   margin-right: auto;
   position: relative;
   height: 100%;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
   width: 500px;
   box-shadow: 0 1px 8px rgba(#000,.25);
   
@@ -81,15 +53,9 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
     position: relative;
     display: block;
     padding: 1em;
-    // background: linear-gradient(to bottom, rgba(254,254,254,1) 0%,rgba(209,209,209,1) 50%,rgba(219,219,219,1) 55%,rgba(226,226,226,1) 100%);
-    // border-top: 1px solid rgba(#000,.15);;
-    // border-bottom: 1px solid rgba(#000,.15);
-    // box-shadow: inset 0 2px 0 #fff;
     font-size: 1.5em;
-    // text-shadow: 0 1px 0 rgba(#fff,.75);
     color: $med-grey;
     cursor: pointer;
-    // transition: all $timing $ease;
     
     &:after {
       content: '+';
@@ -100,9 +66,6 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
       color: black;
       text-align: center;
       border-radius: 50%;
-      // background: $highlight-color;
-      // box-shadow: inset 0 1px 6px rgba(#000,.5), 0 1px 0 #fff;
-      // text-shadow: 0 1px 0 rgba(#000,.75);     
     }
     
     &:hover {
@@ -129,15 +92,8 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
     height: 0px;
     position: relative;
     padding: 0 1.5em;
-    // box-shadow: inset 4px 0 0 0 $highlight-color, inset 0 3px 6px rgba(#000,.75);
-    // background: $dark-grey;
-    // background: linear-gradient(to bottom, rgba(68,68,68,1) 0%,rgba(34,34,34,1) 100%);
     color: black;
     transition: height $timing $ease;
-    
-    // &:not(:last-of-type) {
-    //   box-shadow: inset 0 -2px 2px rgba(#000,.25), inset 4px 0 0 0 $highlight-color, inset 0 3px 6px rgba(#000,.75);
-    // }
     
     .accordion__header {
       padding: 1em 5;
@@ -158,15 +114,15 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
 */
 
 input[name='panel']:checked ~ .accordion__content.accordion__contentSmall {
-  height: 120px;
+  height: 100px;
 }
 
-input[name='panel']:checked ~ .accordion__content.accordion__contentMed {
-  height: 200px;
+input[name='panel']:checked ~ .accordion__content.accordion__contentMedium {
+  height: 170px;
 }
 
 input[name='panel']:checked ~ .accordion__content.accordion__contentLarge {
-  height: 300px;
+  height: 210px;
 }
 
 .basic {
