@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import s from './JsonEditor.module.scss';
 import CodeMirror from 'react-codemirror';
 import 'codemirror/lib/codemirror.css';

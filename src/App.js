@@ -9,9 +9,6 @@ import AccordionView from './components/AccordionView/AccordionView';
 // 3) Create editor panel on mobile.
 // 4) Update dimensions to accomodate accordion text length sizes.
 
-// BUG: 
-// 1) height 100% conflicts with transition animation.
-
 class App extends Component {
   constructor() {
     super();

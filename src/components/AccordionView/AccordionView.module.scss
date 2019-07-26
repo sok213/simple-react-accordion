@@ -32,15 +32,22 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
   box-sizing: border-box;
 }
 
+.container {
+  padding-bottom: 50px;
+}
+
 /* Basic Accordion Styles */
 .accordion {
   margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  height: 100%;
   width: 500px;
   box-shadow: 0 1px 8px rgba(#000,.25);
+
+  @media screen and (max-width: 960px) {
+    margin-top: 200px;
+  }
   
   
   /* Radio Inputs */
