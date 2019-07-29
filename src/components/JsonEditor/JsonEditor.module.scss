@@ -8,4 +8,12 @@
 .submitBtn {
   margin-top: 20px;
   z-index: 100;
+  background-color: rgba(82, 192, 82, 1);
+  color: white;
+  border: thin solid rgb(10, 136, 21);
+  margin: 0px 10px 10px 0px;
+  padding: 8px 15px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
