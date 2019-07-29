@@ -84,11 +84,6 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
       text-align: center;
       border-radius: 50%;
     }
-    
-    &:hover {
-      // color: $highlight-color;
-    }
-      
   }
   
   input:checked + label {
@@ -96,10 +91,9 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
     
     &:after {
       content: '-';
-      /* adjsut line-height to vertically center icon */
+      /* adjust line-height to vertically center icon */
       line-height: .8em;
     }
-    
   }
   
   /* Panel Content */
@@ -152,6 +146,7 @@ input[name='panel']:checked ~ .accordion__content.accordion__contentLarge {
 
 .transparent {
   border: thin solid blue;
+  background-color: rgba(255, 255, 255, 0.78);
 }
 
 .thick {
@@ -164,4 +159,8 @@ input[name='panel']:checked ~ .accordion__content.accordion__contentLarge {
 
 .professional {
   border: thin solid purple;
+
+  .accordionBar:nth-child(even) label {
+    background-color: rgb(235, 231, 231) !important;
+  }
 }

@@ -31,7 +31,7 @@ class AccordionView extends Component {
   generateAccordion = () => {
     return this.props.items.map((item, key) => {
       return (
-        <div key={key}>
+        <div key={key} className={s.accordionBar}>
           <input type="radio" name="panel" id={`panel-${key}`} />
           <label htmlFor={`panel-${key}`}>{item.header}</label>
           <div 
@@ -41,7 +41,11 @@ class AccordionView extends Component {
             `}
           >
             <p className={s.accordion__body}>
-              {item.content.length < 756 ? item.content : "ERROR: content must not exceed 756 characters." }
+              {
+                item.content.length < 756 ?
+                  item.content :
+                    "ERROR: content must not exceed 756 characters." 
+              }
             </p>
           </div>
         </div>
