@@ -10,13 +10,29 @@ class JsonEditor extends Component {
     this.state = {
       code: '[\n' + 
       ' { \n' +  
-        '  "header": "What makes this accordion so special?",' + 
-        '\n  "content": "This accordion is special because..." \n ' + 
+        '  "header": "About this component",' + 
+        '\n  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit." \n ' + 
       '}, \n' +
       ' { \n' +  
-        '  "header": "What is love?",' + 
-        '\n  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit " \n ' + 
-      '}' +
+        '  "header": "Documentation",' + 
+        '\n  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit." \n ' + 
+      '},' +
+      ' { \n' +  
+      '  "header": "What is the purpose?",' + 
+      '\n  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit." \n ' + 
+    '}, \n' +
+    ' { \n' +  
+      '  "header": "How do I use it?",' + 
+      '\n  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit." \n ' + 
+    '},' +
+    ' { \n' +  
+    '  "header": "Can I provide feedback?",' + 
+    '\n  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit." \n ' + 
+  '}, \n' +
+  ' { \n' +  
+    '  "header": "How can I support the developer?",' + 
+    '\n  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit." \n ' + 
+  '}' +
      '\n]',
       options: { lineNumbers: true, json: true, lineWrapping: true }
     }
