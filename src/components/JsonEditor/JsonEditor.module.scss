@@ -1,16 +1,16 @@
 .container {
   display: fixed;
-  padding: 20px;
+  padding: 10px;
   margin: auto;
   width: 100%;
+  padding: 20px;
 
   @media screen and (min-width: 999px) {
     max-width: 550px;
   }
 
-  @media screen and (max-width: 960px) {
-    padding-top: 0px;
-    padding-bottom: 0px;
+  @media screen and (max-width: 999px) {
+    padding: 0px 20px 20px 20px;
   }
 }
 
