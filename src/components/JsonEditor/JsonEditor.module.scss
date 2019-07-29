@@ -1,8 +1,17 @@
 .container {
-  max-width: 550px;
   display: fixed;
   padding: 20px;
   margin: auto;
+  width: 100%;
+
+  @media screen and (min-width: 999px) {
+    max-width: 550px;
+  }
+
+  @media screen and (max-width: 960px) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 .submitBtn {

@@ -52,6 +52,7 @@ class AccordionView extends Component {
   render() {
     return (
       <div className={s.container}>
+        <h3>simple-react-accordion</h3>
         <div className={`
           ${s.accordion} 
           ${this.applyTheme()}
