@@ -54,7 +54,7 @@ class App extends Component {
     this.setState({ items: JSON.parse(editorValue) });
   }
 
-  changeTheme = (selectedTheme) => {
+  changeTheme = selectedTheme => {
     this.setState({ activeTheme: selectedTheme });
   }
 
@@ -75,6 +75,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;
