@@ -24,7 +24,7 @@ class ThemeSelector extends Component {
         {this.state.themes.map(theme => {
           return (
             <button 
-              className={s.themeBtn}
+              className={`${s.themeBtn} ${s[`${theme}Btn`]}`}
               key={theme}
               onClick={this.props.changeTheme.bind(this, theme)}
             >

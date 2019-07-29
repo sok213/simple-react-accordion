@@ -5,4 +5,32 @@
   font-size: 15px;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.basicBtn {
+  background-color: rgba(61, 116, 244, 1);
+  color: white;
+  border: none;
+  border-bottom: 2px solid rgb(39, 80, 177);
+  border-left: 2px solid rgb(60, 106, 214);
+}
+
+.minimalBtn {
+  border-color: rgb(161, 158, 158);
+}
+
+.darkBtn {
+  background-color: rgb(39, 40, 43);
+  color: rgb(190, 190, 190);
+}
+
+.professionalBtn {
+  border: thin solid rgba(244, 61, 61, 1);
+  background-color: rgba(244, 61, 61, 1);
+  color: white;
 }
