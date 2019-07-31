@@ -51,6 +51,7 @@ class JsonEditor extends Component {
           changeTheme={this.changeTheme}
         />
         <h3 className={s.sectionHeader}>JSON Data</h3>
+        {this.props.errorMessage && <div className={s.errorMessage}>{this.props.errorMessage}</div>}
         <div className={s.codeMirrorContainer}>
           <CodeMirror
             value={this.state.code}

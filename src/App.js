@@ -12,6 +12,7 @@ class App extends Component {
     super();
 
     this.state = {
+      validateJson: null,
       activeTheme: "basic",
       items: [
         {
@@ -39,11 +40,16 @@ class App extends Component {
   }
 
   getEditorValue = editorValue => {
-    this.setState({ items: JSON.parse(editorValue) });
+    try {
+      this.setState({ items: JSON.parse(editorValue), validateJson: null });
+    } catch(e) {
+      this.setState({ 
+        validateJson: "JSON data is an invalid format. Please, check your formatting." 
+      });
+    }
   }
 
   changeTheme = selectedTheme => {
-    console.log('test')
     this.setState({ activeTheme: selectedTheme });
   }
 
@@ -54,6 +60,7 @@ class App extends Component {
           changeTheme={this.changeTheme}
           items={this.state.items} 
           getEditorValue={this.getEditorValue}
+          errorMessage={this.state.validateJson}
         />
         <AccordionView 
           activeTheme={this.state.activeTheme} 
