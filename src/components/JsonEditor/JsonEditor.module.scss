@@ -1,13 +1,14 @@
 .container {
-  display: fixed;
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   margin: auto;
   width: 100%;
-  padding: 20px;
+  padding: 20px 50px;
   margin-top: 0px;
 
   @media screen and (min-width: 999px) {
-    max-width: 550px;
+    max-width: 720px;
   }
 
   @media screen and (max-width: 999px) {
@@ -16,14 +17,24 @@
 }
 
 .submitBtn {
-  margin-top: 20px;
+  max-width: 400px;
+  width: 100%;
   z-index: 100;
+  margin: auto;
   background-color: rgba(82, 192, 82, 1);
   color: white;
   border: thin solid rgb(10, 136, 21);
-  margin: 0px 10px 10px 0px;
   padding: 8px 15px;
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.buttonContainer {
+  display: flex;
+  padding-top: 40px;
+}
+
+.codeMirrorContainer {
+  height: 500px;
 }

@@ -6,9 +6,9 @@ class AccordionView extends Component {
     if(this.props.theme === "basic") {
       return s.basic;
     } else if(this.props.theme === "transparent") {
-      return s.transparent
-    } else if(this.props.theme === "thick") {
-      return s.thick;
+      return s.transparent;
+    } else if(this.props.theme === "well") {
+      return s.well;
     } else if(this.props.theme === "dark") {
       return s.dark;
     } else if(this.props.theme === "professional") {
@@ -33,7 +33,7 @@ class AccordionView extends Component {
       return (
         <div key={key} className={s.accordionBar}>
           <input type="radio" name="panel" id={`panel-${key}`} />
-          <label htmlFor={`panel-${key}`}>{item.header}</label>
+          <label htmlFor={`panel-${key}`} className={s.accordion__header}>{item.header}</label>
           <div 
             className={`
               ${s.accordion__content} 
@@ -56,7 +56,7 @@ class AccordionView extends Component {
   render() {
     return (
       <div className={s.container}>
-        <h3>simple-react-accordion</h3>
+        <h3 className={s.sectionHeader}>simple-react-accordion</h3>
         <div className={`
           ${s.accordion} 
           ${this.applyTheme()}

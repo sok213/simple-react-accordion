@@ -40,10 +40,6 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
   color: white;
   background-color: rgb(123, 151, 228);
 
-  @media screen and (min-width: 999px) {
-    max-width: 550px;
-  }
-
   @media screen and (max-width: 960px) {
     padding-top: 0px;
   }
@@ -51,6 +47,7 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
 
 /* Basic Accordion Styles */
 .accordion {
+  max-width: 800px;
   background-color: white;
   margin-top: 0px;
   margin-left: auto;
@@ -106,21 +103,30 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
     padding: 0 1.5em;
     color: black;
     transition: height $timing $ease;
-    
-    .accordion__header {
-      padding: 1em 5;
-    }
       
     .accordion__body {
       margin-top: 0px;
       font-size: .825em;
       line-height: 1.4em;
+      font-family: 'Roboto', arial, sans-serif;
     }
     
   }
-   
+
+  .accordion__header {
+    padding: 1em 5;
+    font-family: 'Roboto', arial, sans-serif;
+
+    @media screen and (max-width: 600px) {
+      font-size: 20px;
+    }
+  }
+  
 }
 
+.sectionHeader {
+  text-align: center;
+}
 
 /* 
 * Size Variations
@@ -140,16 +146,22 @@ input[name='panel']:checked ~ .accordion__content.accordion__contentLarge {
 
 .basic {
   box-shadow: $basic-shadow;
+  border-radius: 5px;
+
+  .accordionBar:last-child .accordion__content{
+    border-bottom: none;
+  }
 }
 
-// .minimal {
-// }
+.minimal {
+
+}
 
 .transparent {
   background-color: rgba(255, 255, 255, 0.78);
 }
 
-.thick {
+.well {
   border: thin solid yellow;
 }
 
@@ -159,6 +171,15 @@ input[name='panel']:checked ~ .accordion__content.accordion__contentLarge {
 
 .professional {
   box-shadow: $basic-shadow;
+  border-radius: 5px;
+
+  .accordionBar:last-child .accordion__content {
+    border-bottom: none;
+  }
+
+  .accordionBar:last-child label {
+    border-radius: 5px;
+  }
 
   .accordionBar:nth-child(even) {
 

@@ -53,18 +53,21 @@ class JsonEditor extends Component {
           changeTheme={this.changeTheme}
         />
         <h3>JSON Data</h3>
-        <CodeMirror
-          style={{ height: "100%" }}
-          value={this.state.code}
-          onChange={this.updateCode}
-          options={this.state.options}
-        />
-        <button 
-          className={s.submitBtn}
-          onClick={this.props.getEditorValue.bind(this, this.state.code)}
-        >
-          Submit
-        </button>
+        <div className={s.codeMirrorContainer}>
+          <CodeMirror
+            value={this.state.code}
+            onChange={this.updateCode}
+            options={this.state.options}
+          />
+        </div>
+        <div className={s.buttonContainer}>
+          <button 
+            className={s.submitBtn}
+            onClick={this.props.getEditorValue.bind(this, this.state.code)}
+          >
+            Submit
+          </button>
+        </div>
       </div>
     );
   }

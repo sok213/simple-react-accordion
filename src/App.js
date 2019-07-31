@@ -12,14 +12,6 @@ class App extends Component {
     super();
 
     this.state = {
-      themes: [
-        "basic",
-        "minimal",
-        "transparent",
-        "thick",
-        "dark",
-        "professional",
-      ],
       activeTheme: "basic",
       items: [
         {
@@ -35,7 +27,7 @@ class App extends Component {
           content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit."
         },
         {
-          header: "How to use?",
+          header: "How do I use it?",
           content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit."
         },
         {
