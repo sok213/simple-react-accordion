@@ -171,14 +171,19 @@ input[name='panel']:checked ~ .accordion__content.accordion__contentLarge {
 
 .professional {
   box-shadow: $basic-shadow;
-  border-radius: 5px;
+  border-radius:  5px;
 
   .accordionBar:last-child .accordion__content {
     border-bottom: none;
+    border-radius: 0px 0px 5px 5px;
   }
 
   .accordionBar:last-child label {
-    border-radius: 5px;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  .accordionBar:last-child input:checked + label {
+    border-radius: 0px;
   }
 
   .accordionBar:nth-child(even) {
