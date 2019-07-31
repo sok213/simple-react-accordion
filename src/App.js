@@ -4,9 +4,7 @@ import JsonEditor from './components/JsonEditor/JsonEditor';
 import AccordionView from './components/AccordionView/AccordionView';
 
 // TODO:
-// 1) Update theme button styles.
-// 2) Create theme css classes.
-// 3) Create json invalid value catch message.
+// 3) Create json invalid value catch message. (try catch JSON.parse(this.state.code))
 // 4) Build NPM package.
 
 class App extends Component {

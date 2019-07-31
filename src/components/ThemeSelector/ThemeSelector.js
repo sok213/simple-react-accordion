@@ -6,6 +6,7 @@ class ThemeSelector extends Component {
     super();
 
     this.state = {
+      activeTheme: null,
       themes: [
         "basic",
         "minimal",
@@ -15,7 +16,18 @@ class ThemeSelector extends Component {
       ]
     }
   }
+
+  activeTheme = (theme) => {
+    console.log("theme: ", theme)
+    this.setState({ activeTheme: theme });
+  }
   
+  applyActiveStyle(theme) {
+    if(this.state.activeTheme === theme) {
+      return s.activeTheme;
+    }
+  }
+
   render() {
     return (
       <div className={s.container}>
@@ -23,9 +35,13 @@ class ThemeSelector extends Component {
         {this.state.themes.map(theme => {
           return (
             <button 
-              className={`${s.themeBtn} ${s[`${theme}Btn`]}`}
+              className={`
+                ${s.themeBtn} 
+                ${s[`${theme}Btn`]}
+                ${this.applyActiveStyle(theme)}
+              `}
               key={theme}
-              onClick={this.props.changeTheme.bind(this, theme)}
+              onClick={(this.props.changeTheme.bind(this, theme), this.activeTheme.bind(this, theme))}
             >
               {theme}
             </button>

@@ -5,10 +5,16 @@
   font-size: 15px;
   border-radius: 5px;
   cursor: pointer;
+  outline-color: white;
 
   &:hover {
     opacity: 0.8;
   }
+}
+
+.activeTheme {
+  outline-offset: 2px;
+  outline: 2px solid rgb(59, 181, 238);
 }
 
 .wellBtn {
