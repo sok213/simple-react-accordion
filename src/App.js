@@ -6,6 +6,8 @@ import AccordionView from './components/AccordionView/AccordionView';
 // TODO:
 // 1) Update theme button styles.
 // 2) Create theme css classes.
+// 3) Create json invalid value catch message.
+// 4) Build NPM package.
 
 class App extends Component {
   constructor() {
@@ -23,11 +25,7 @@ class App extends Component {
           content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit."
         },
         {
-          header: "What is the purpose?",
-          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit."
-        },
-        {
-          header: "How do I use it?",
+          header: "Why use this NPM package?",
           content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit."
         },
         {

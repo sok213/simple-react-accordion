@@ -9,7 +9,6 @@ class ThemeSelector extends Component {
       themes: [
         "basic",
         "minimal",
-        "transparent",
         "well",
         "dark",
         "professional",

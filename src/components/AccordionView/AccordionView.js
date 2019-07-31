@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
 import s from './AccordionView.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 class AccordionView extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      activeBar: null
+    }
+  }
+
   applyTheme = () => {
     if(this.props.theme === "basic") {
       return s.basic;
-    } else if(this.props.theme === "transparent") {
-      return s.transparent;
+    } else if(this.props.theme === "minimal") {
+      return s.minimal;
     } else if(this.props.theme === "well") {
       return s.well;
     } else if(this.props.theme === "dark") {
       return s.dark;
     } else if(this.props.theme === "professional") {
       return s.professional;
-    } else if(this.props.theme === "minimal") {
-      return s.minimal;
     }
   }
 
@@ -28,17 +36,38 @@ class AccordionView extends Component {
     }
   }
 
+  minimalIcons(key) {
+    if(this.props.theme === "minimal") {
+      if(this.state.activeBar === key) {
+        return <FontAwesomeIcon icon={faAngleUp} className={s.upArrow} />
+      }
+      return <FontAwesomeIcon icon={faAngleDown} />
+    }
+  }
+
+  activateBar = (key) => {
+    this.setState({ activeBar: key});
+  }
+
   generateAccordion = () => {
     return this.props.items.map((item, key) => {
       return (
         <div key={key} className={s.accordionBar}>
-          <input type="radio" name="panel" id={`panel-${key}`} />
-          <label 
-            htmlFor={`panel-${key}`} 
-            className={s.accordion__header}
-          >
-            {item.header}
-          </label>
+          <input 
+            type="radio" 
+            name="panel" 
+            id={`panel-${key}`} 
+            onClick={this.activateBar.bind(this, key)}
+          />
+            <label 
+              htmlFor={`panel-${key}`} 
+              className={s.accordion__header}
+            >
+              {item.header} 
+              <span className={s.minimalIcons}>
+                {this.minimalIcons(key)}
+              </span>
+            </label>
           <div 
             className={`
               ${s.accordion__content} 
