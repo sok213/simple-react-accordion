@@ -26,16 +26,24 @@
   width: 100%;
   z-index: 100;
   margin: auto;
-  background-color: rgba(82, 192, 82, 1);
+  background: rgb(114,212,123);
+  background: -moz-linear-gradient(180deg, rgba(114,212,123,1) 0%, rgba(64,178,74,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(114,212,123,1) 0%, rgba(64,178,74,1) 100%);
+  background: linear-gradient(180deg, rgba(114,212,123,1) 0%, rgba(64,178,74,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#72d47b",endColorstr="#40b24a",GradientType=1);
   color: white;
-  border: thin solid rgb(10, 136, 21);
+  border-bottom: 2px solid rgb(16, 158, 28);
+  border-left: 2px solid rgb(35, 170, 46);
+  border-top: thin solid rgb(79, 202, 89);
+  border-right: thin solid rgb(79, 202, 89);
   padding: 8px 15px;
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.1s;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.85;
   }
 
   &:active {

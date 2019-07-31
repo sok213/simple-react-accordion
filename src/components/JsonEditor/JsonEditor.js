@@ -3,6 +3,8 @@ import s from './JsonEditor.module.scss';
 import CodeMirror from 'react-codemirror';
 import 'codemirror/lib/codemirror.css';
 import ThemeSelector from '../ThemeSelector/ThemeSelector';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 class JsonEditor extends Component {
   constructor() {
@@ -65,7 +67,7 @@ class JsonEditor extends Component {
             className={s.submitBtn}
             onClick={this.props.getEditorValue.bind(this, this.state.code)}
           >
-            Submit
+            Submit <FontAwesomeIcon icon={faCode} />
           </button>
         </div>
       </div>
