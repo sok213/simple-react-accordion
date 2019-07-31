@@ -52,7 +52,7 @@ class JsonEditor extends Component {
         <ThemeSelector 
           changeTheme={this.changeTheme}
         />
-        <h3>JSON Data</h3>
+        <h3 className={s.sectionHeader}>JSON Data</h3>
         <div className={s.codeMirrorContainer}>
           <CodeMirror
             value={this.state.code}

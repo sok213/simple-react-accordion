@@ -33,7 +33,12 @@ class AccordionView extends Component {
       return (
         <div key={key} className={s.accordionBar}>
           <input type="radio" name="panel" id={`panel-${key}`} />
-          <label htmlFor={`panel-${key}`} className={s.accordion__header}>{item.header}</label>
+          <label 
+            htmlFor={`panel-${key}`} 
+            className={s.accordion__header}
+          >
+            {item.header}
+          </label>
           <div 
             className={`
               ${s.accordion__content} 

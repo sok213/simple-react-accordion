@@ -16,7 +16,12 @@
   }
 }
 
+.sectionHeader {
+  margin-bottom: 0px;
+}
+
 .submitBtn {
+  position: relative;
   max-width: 400px;
   width: 100%;
   z-index: 100;
@@ -28,6 +33,14 @@
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    top: -2px;
+  }
 }
 
 .buttonContainer {
