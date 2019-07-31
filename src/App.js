@@ -43,6 +43,7 @@ class App extends Component {
   }
 
   changeTheme = selectedTheme => {
+    console.log('test')
     this.setState({ activeTheme: selectedTheme });
   }
 

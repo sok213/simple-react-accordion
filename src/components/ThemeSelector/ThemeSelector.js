@@ -18,7 +18,6 @@ class ThemeSelector extends Component {
   }
 
   activeTheme = (theme) => {
-    console.log("theme: ", theme)
     this.setState({ activeTheme: theme });
   }
   
@@ -26,6 +25,11 @@ class ThemeSelector extends Component {
     if(this.state.activeTheme === theme) {
       return s.activeTheme;
     }
+  }
+
+  onButtonClick = (theme) => {
+    this.props.changeTheme(theme);
+    this.activeTheme(theme);
   }
 
   render() {
@@ -41,7 +45,7 @@ class ThemeSelector extends Component {
                 ${this.applyActiveStyle(theme)}
               `}
               key={theme}
-              onClick={(this.props.changeTheme.bind(this, theme), this.activeTheme.bind(this, theme))}
+              onClick={this.onButtonClick.bind(this, theme)}
             >
               {theme}
             </button>
