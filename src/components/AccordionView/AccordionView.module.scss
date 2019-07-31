@@ -201,7 +201,20 @@ input[name='panel']:checked ~ .accordion__content.accordion__contentLarge {
 }
 
 .well {
-  border: thin solid yellow;
+  @extend .custom_noBorder;
+  border-radius: 5px;
+  
+  .accordion__content {
+    transition: 0.3s;
+    background-color: rgb(245, 249, 252);
+  }
+
+  input[name='panel']:checked ~ .accordion__content {
+    padding-top: 15px;
+    -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.29);
+    -moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.29);
+    box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.29);
+  }
 }
 
 .dark {
