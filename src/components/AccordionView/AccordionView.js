@@ -39,14 +39,19 @@ class AccordionView extends Component {
   minimalIcons(key) {
     if(this.props.theme === "minimal") {
       if(this.state.activeBar === key) {
-        return <FontAwesomeIcon icon={faAngleUp} className={s.upArrow} />
+        return (
+          <FontAwesomeIcon 
+            icon={faAngleUp} 
+            className={s.upArrow} 
+          />
+        );
       }
       return <FontAwesomeIcon icon={faAngleDown} />
     }
   }
 
   activateBar = (key) => {
-    this.setState({ activeBar: key});
+    this.setState({ activeBar: key });
   }
 
   generateAccordion = () => {
