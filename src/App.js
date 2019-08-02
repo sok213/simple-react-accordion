@@ -17,7 +17,7 @@ class App extends Component {
       items: [
         {
           header: "About this component",
-          content: "Simple-react-accordion is a React component that takes in JSON data as a prop and generates an accordion. It’s very easy to use and offers 5 pre-built in themes. If you need a quick way to implement a simple accordion within your React app, simple-react-accordion is the perfect solution!"
+          content: "simple-react-accordion is a React component that takes in JSON data as a prop and generates an accordion. It’s very easy to use and offers 5 pre-built in themes. If you need a quick way to implement a simple accordion within your React app, simple-react-accordion is the perfect solution!"
         },
         {
           header: "Documentation",

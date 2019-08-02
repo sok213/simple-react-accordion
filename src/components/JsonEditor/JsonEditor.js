@@ -21,7 +21,7 @@ class JsonEditor extends Component {
       '}, \n ' +
       '{ \n' +  
         '  "header": "Why use this NPM package?",' + 
-        '\n  "content": "Simple-react-accordion is a passion project built by @just_soak_it_in and will forever be supported and improved based on feedback. It’s easy to use, lightweight, and can easily be customized when forked." \n ' + 
+        '\n  "content": "simple-react-accordion is a passion project built by @just_soak_it_in and will forever be supported and improved based on feedback. It’s easy to use, lightweight, and can easily be customized when forked." \n ' + 
       '}, \n' +
       '{ \n' +  
         '  "header": "Can I provide feedback?",' + 
