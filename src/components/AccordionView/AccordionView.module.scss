@@ -106,7 +106,7 @@ $ease: cubic-bezier(0.865, 0.140, 0.095, 0.870);
       
     .accordion__body {
       margin-top: 0px;
-      font-size: .825em;
+      font-size: 15px;
       line-height: 1.4em;
       font-family: 'Roboto', arial, sans-serif;
     }
@@ -210,7 +210,7 @@ input[name='panel']:checked ~ .accordion__content.accordion__contentLarge {
   }
 
   input[name='panel']:checked ~ .accordion__content {
-    padding-top: 15px;
+    padding-top: 20px;
     -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.29);
     -moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.29);
     box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.29);

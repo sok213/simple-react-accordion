@@ -4,7 +4,7 @@ import JsonEditor from './components/JsonEditor/JsonEditor';
 import AccordionView from './components/AccordionView/AccordionView';
 
 // TODO:
-// 3) Create json invalid value catch message. (try catch JSON.parse(this.state.code))
+// 1) Update content within each section.
 // 4) Build NPM package.
 
 class App extends Component {
@@ -17,23 +17,23 @@ class App extends Component {
       items: [
         {
           header: "About this component",
-          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit."
+          content: "Simple-react-accordion is a React component that takes in JSON data as a prop and generates an accordion. It’s very easy to use and offers 5 pre-built in themes. If you need a quick way to implement a simple accordion within your React app, simple-react-accordion is the perfect solution!"
         },
         {
           header: "Documentation",
-          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit."
+          content: "You can find the documentation at the NPM page here - [Link]"
         },
         {
           header: "Why use this NPM package?",
-          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit."
+          content: "Simple-react-accordion is a passion project built by @just_soak_it_in and will forever be supported and improved based on feedback. It’s easy to use, lightweight, and can easily be customized when forked."
         },
         {
           header: "Can I provide feedback?",
-          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit."
+          content: "Yes! Feedback is very much appreciated and all great ideas will most likely be implemented. Contact the developer through email - sokcodes@gmail.com or Instagram - @just_soak_it_in. Also, feel free to contribute to this project if you’d like on Github - https://github.com/sok213/simple-react-accordion"
         },
         {
           header: "How can I support the developer?",
-          content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit."
+          content: "You can support me by following me on Instagram - @just_soak_it_in to see what cool things (or lame things) that I am doing."
         }
       ]
     }
@@ -41,7 +41,10 @@ class App extends Component {
 
   getEditorValue = editorValue => {
     try {
-      this.setState({ items: JSON.parse(editorValue), validateJson: null });
+      this.setState({ 
+        items: JSON.parse(editorValue), 
+        validateJson: null 
+      });
     } catch(e) {
       this.setState({ 
         validateJson: "JSON data is an invalid format. Please, check your formatting." 
