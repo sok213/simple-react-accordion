@@ -202,6 +202,7 @@ input[name='panel']:checked ~ .accordion__content.accordion__contentLarge {
 
 .well {
   @extend .custom_noBorder;
+  border: thin solid #eee;
   border-radius: 5px;
   
   .accordion__content {
