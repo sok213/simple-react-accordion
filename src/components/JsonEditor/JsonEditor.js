@@ -13,7 +13,7 @@ class JsonEditor extends Component {
       code: '[\n' + 
       ' { \n' +  
         '  "header": "About this component",' + 
-        '\n  "content": "Simple-react-accordion is a React component that takes in JSON data as a prop and generates an accordion. It’s very easy to use and offers 5 pre-built in themes. If you need a quick way to implement a simple accordion within your React app, simple-react-accordion is the perfect solution!" \n ' + 
+        '\n  "content": "Simple-react-accordion is a React component that takes in an array of objects as a prop and generates an accordion. It’s very easy to use and offers 5 pre-built in themes. If you need a quick way to implement a simple accordion within your React app, simple-react-accordion is the perfect solution!" \n ' + 
       '},\n ' +
       '{\n' +  
         '  "header": "Documentation",' + 
