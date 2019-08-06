@@ -17,7 +17,7 @@ class JsonEditor extends Component {
       '},\n ' +
       '{\n' +  
         '  "header": "Documentation",' + 
-        '\n  "content": "You can find the documentation at the NPM page here - [Link]" \n ' + 
+        '\n  "content": "You can find the documentation at the NPM page here - https://www.npmjs.com/package/simple-react-accordion" \n ' + 
       '}, \n ' +
       '{ \n' +  
         '  "header": "Why use this NPM package?",' + 

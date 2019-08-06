@@ -21,7 +21,7 @@ class App extends Component {
         },
         {
           header: "Documentation",
-          content: "You can find the documentation at the NPM page here - [Link]"
+          content: "You can find the documentation at the NPM page here - https://www.npmjs.com/package/simple-react-accordion"
         },
         {
           header: "Why use this NPM package?",
