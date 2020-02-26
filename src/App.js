@@ -3,10 +3,6 @@ import s from './App.module.scss';
 import JsonEditor from './components/JsonEditor/JsonEditor';
 import AccordionView from './components/AccordionView/AccordionView';
 
-// TODO:
-// 1) Update content within each section.
-// 4) Build NPM package.
-
 class App extends Component {
   constructor() {
     super();
