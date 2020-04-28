@@ -17,19 +17,19 @@ class JsonEditor extends Component {
       '},\n ' +
       '{\n' +  
         '  "header": "Documentation",' + 
-        '\n  "content": "You can find the documentation at the NPM page here - https://www.npmjs.com/package/simple-react-accordion" \n ' + 
+        '\n  "content": "You can find the documentation at the NPM page here - https://www.npmjs.com/package/simple-react-accordion." \n ' + 
       '}, \n ' +
       '{ \n' +  
         '  "header": "Why use this NPM package?",' + 
-        '\n  "content": "simple-react-accordion is a passion project built by @just_soak_it_in and will forever be supported and improved based on feedback. It’s easy to use, lightweight, and can easily be customized when forked." \n ' + 
+        '\n  "content": "simple-react-accordion is a passion project built by Sophanarith Sok and will forever be supported and improved based on feedback. It’s easy to use, lightweight, and can easily be customized when forked." \n ' + 
       '}, \n' +
       '{ \n' +  
         '  "header": "Can I provide feedback?",' + 
-        '\n  "content": "Yes! Feedback is very much appreciated and all great ideas will most likely be implemented. Contact the developer through email - sokcodes@gmail.com or Instagram - @just_soak_it_in. Also, feel free to contribute to this project if you’d like on Github - https://github.com/sok213/simple-react-accordion" \n ' + 
+        '\n  "content": "Yes! Feedback is very much appreciated and all great ideas will most likely be implemented. Contact the developer through email - sokcodes@gmail.com. Also, feel free to contribute to this project if you’d like on Github - https://github.com/sok213/simple-react-accordion." \n ' + 
       '}, \n' +
       '{ \n' +  
         '  "header": "How can I support the developer?",' + 
-        '\n  "content": "You can support me by following me on Instagram - @just_soak_it_in to see what cool things (or lame things) that I am doing." \n ' + 
+        '\n  "content": "You can support me by simply using this component in your app. :)" \n ' + 
       '}' +
      '\n]',
       options: { lineNumbers: true, json: true, lineWrapping: true }
