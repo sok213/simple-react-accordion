@@ -22,6 +22,22 @@
  font-weight: bold;
 }
 
+.links {
+  border: thin solid rgb(197, 197, 197);
+  padding: 0px 15px;
+  border-radius: 5px;
+
+  p {
+    margin: 15px 0px;
+    font-family: 'Roboto', arial, sans-serif;
+  }
+
+  a {
+    text-decoration: underline;
+    color: rgb(129, 121, 240);
+  }
+}
+
 .sectionHeader {
   margin-bottom: 0px;
 }

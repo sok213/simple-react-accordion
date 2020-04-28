@@ -47,6 +47,11 @@ class JsonEditor extends Component {
   render() {
     return (
       <div className={s.container}>
+        <h3>Links</h3>
+        <div className={s.links}>
+          <a href="https://www.npmjs.com/package/simple-react-accordion" target="_blank"><p>View package on npmjs</p></a>
+          <a href="https://github.com/sok213/simple-react-accordion-npm-package" target="_blank"><p>View source code on GitHub</p></a>
+        </div>
         <ThemeSelector 
           changeTheme={this.changeTheme}
         />
