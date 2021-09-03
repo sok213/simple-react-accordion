@@ -29,7 +29,7 @@ class App extends Component {
         },
         {
           header: "How can I support the developer?",
-          content: "You can support me by following me on Instagram - @just_soak_it_in to see what cool things (or lame things) that I am doing."
+          content: "You can support me by simply downloading the NPM package for free and using it!"
         }
       ]
     }
